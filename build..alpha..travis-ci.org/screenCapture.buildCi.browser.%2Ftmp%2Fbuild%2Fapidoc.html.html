@@ -1,0 +1,965 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ebaauw/homebridge-hue#readme">homebridge-hue (v0.4.0)</a>
+</h1>
+<h4>Homebridge plugin for Philips Hue</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue">module homebridge-hue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.homebridge-hue">
+            function <span class="apidocSignatureSpan"></span>homebridge-hue
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-hue.</span>HueBridge</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-hue.</span>HueLight</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-hue.</span>HuePlatform</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-hue.</span>HueSchedule</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-hue.</span>HueSensor</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue.HueBridge">module homebridge-hue.HueBridge</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueBridge.HueBridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.</span>HueBridge
+            <span class="apidocSignatureSpan">(platform, host)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueBridge.setHomebridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.HueBridge.</span>setHomebridge
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue.HueLight">module homebridge-hue.HueLight</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueLight.HueLight">
+            function <span class="apidocSignatureSpan">homebridge-hue.</span>HueLight
+            <span class="apidocSignatureSpan">(bridge, id, obj, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueLight.setHomebridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.HueLight.</span>setHomebridge
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue.HuePlatform">module homebridge-hue.HuePlatform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HuePlatform.HuePlatform">
+            function <span class="apidocSignatureSpan">homebridge-hue.</span>HuePlatform
+            <span class="apidocSignatureSpan">(log, config, api)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HuePlatform.setHomebridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.HuePlatform.</span>setHomebridge
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue.HueSchedule">module homebridge-hue.HueSchedule</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueSchedule.HueSchedule">
+            function <span class="apidocSignatureSpan">homebridge-hue.</span>HueSchedule
+            <span class="apidocSignatureSpan">(bridge, id, obj, type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueSchedule.setHomebridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.HueSchedule.</span>setHomebridge
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-hue.HueSensor">module homebridge-hue.HueSensor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueSensor.HueSensor">
+            function <span class="apidocSignatureSpan">homebridge-hue.</span>HueSensor
+            <span class="apidocSignatureSpan">(bridge, id, obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-hue.HueSensor.setHomebridge">
+            function <span class="apidocSignatureSpan">homebridge-hue.HueSensor.</span>setHomebridge
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue" id="apidoc.module.homebridge-hue">module homebridge-hue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.homebridge-hue" id="apidoc.element.homebridge-hue.homebridge-hue">
+        function <span class="apidocSignatureSpan"></span>homebridge-hue
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">homebridge-hue = function (homebridge) {
+  HuePlatformModule.setHomebridge(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue.HueBridge" id="apidoc.module.homebridge-hue.HueBridge">module homebridge-hue.HueBridge</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueBridge.HueBridge" id="apidoc.element.homebridge-hue.HueBridge.HueBridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.</span>HueBridge
+        <span class="apidocSignatureSpan">(platform, host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HueBridge(platform, host) {
+  this.log = platform.log;
+  this.platform = platform;
+  this.name = host;
+  this.url = 'http://' + host + '/api';
+  this.state = {
+    heartrate: this.platform.config.heartrate,
+    request: 0,
+    touchlink: false
+  };
+  this.serviceList = [];
+  this.lights = {};
+  this.groups = {};
+  this.sensors = {};
+  this.schedules = {};
+  this.rules = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.infoService
+  .updateCharacteristic(Characteristic.Manufacturer, 'Philips')
+  .updateCharacteristic(Characteristic.Model, obj.modelid)
+  .updateCharacteristic(Characteristic.SerialNumber, this.uuid_base);
+this.obj = obj;
+this.obj.linkbutton = false;
+this.refresh();
+this.service = new Service.<span class="apidocCodeKeywordSpan">HueBridge</span>(this.name);
+this.serviceList.push(this.service);
+this.service.getCharacteristic(Characteristic.Heartrate)
+  .updateValue(this.state.heartrate)
+  .on('set', this.setHeartrate.bind(this));
+this.service.getCharacteristic(Characteristic.LastUpdated)
+  .updateValue(this.hk.lastupdated);
+this.service.getCharacteristic(Characteristic.Link)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueBridge.setHomebridge" id="apidoc.element.homebridge-hue.HueBridge.setHomebridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.HueBridge.</span>setHomebridge
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setHomebridge(homebridge) {
+  HueLightModule.setHomebridge(homebridge);
+  HueSensorModule.setHomebridge(homebridge);
+  HueScheduleModule.setHomebridge(homebridge);
+  Accessory = homebridge.platformAccessory;
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const dynamic = false;
+
+const HuePlatformModule = require('./lib/HuePlatform');
+const HuePlatform = HuePlatformModule.HuePlatform;
+
+module.exports = function(homebridge) {
+  HuePlatformModule.<span class="apidocCodeKeywordSpan">setHomebridge</span>(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue.HueLight" id="apidoc.module.homebridge-hue.HueLight">module homebridge-hue.HueLight</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueLight.HueLight" id="apidoc.element.homebridge-hue.HueLight.HueLight">
+        function <span class="apidocSignatureSpan">homebridge-hue.</span>HueLight
+        <span class="apidocSignatureSpan">(bridge, id, obj, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HueLight(bridge, id, obj, type) {
+  // jshint -W106
+  this.log = bridge.log;
+  this.bridge = bridge;
+  this.name = obj.name;
+  this.type = type || 'light';
+  this.obj = obj;
+  this.resource = '/' + this.type + 's/' + id;
+  this.key = this.type === 'group' ? 'action' : 'state';
+  this.resourcePath = this.resource + '/' + this.key;
+
+  this.setConfig();
+  this.uuid_base = this.config.serialNumber;
+  this.infoService = new Service.AccessoryInformation();
+  this.serviceList = [this.infoService];
+  this.infoService
+    .updateCharacteristic(Characteristic.Manufacturer, this.config.manufacturer)
+    .updateCharacteristic(Characteristic.Model, this.config.model)
+    .updateCharacteristic(Characteristic.SerialNumber, this.config.serialNumber);
+  if (this.config.bri) {
+    this.service = new Service.Lightbulb(this.name, this.config.subtype);
+  } else {
+    this.service = new Service.Switch(this.name, this.config.subtype);
+  }
+  this.serviceList.push(this.service);
+
+  this.setHK();
+  this.service.getCharacteristic(Characteristic.On)
+    .updateValue(this.hk.on)
+    .on('set', this.setOn.bind(this));
+  if (this.type === 'group') {
+    this.service.addOptionalCharacteristic(Characteristic.AnyOn);
+    this.service.getCharacteristic(Characteristic.AnyOn)
+      .updateValue(this.hk.any_on)
+      .on('set', this.setAnyOn.bind(this));
+  }
+  if (this.config.bri) {
+    this.service.getCharacteristic(Characteristic.Brightness)
+      .updateValue(this.hk.bri)
+      .on('set', this.setBri.bind(this));
+  }
+  if (this.config.ct) {
+    if (this.bridge.platform.config.ct) {
+      this.service.addOptionalCharacteristic(Characteristic.CT);
+      this.service.getCharacteristic(Characteristic.CT)
+        .updateValue(this.state.ct)
+        .on('set', this.setCT.bind(this))
+        .setProps({maxValue: this.config.maxCT});
+    } else {
+      this.service.addOptionalCharacteristic(Characteristic.ColorTemperature);
+      this.service.getCharacteristic(Characteristic.ColorTemperature)
+        .updateValue(this.hk.ct)
+        .on('set', this.setColorTemperature.bind(this))
+        .setProps({minValue: this.colorTemperature(this.config.maxCT)});
+    }
+  }
+  if (this.config.xy || this.config.hs) {
+    this.service.getCharacteristic(Characteristic.Hue)
+      .updateValue(this.hk.hue)
+      .on('set', this.setHue.bind(this));
+    this.service.getCharacteristic(Characteristic.Saturation)
+      .updateValue(this.hk.sat)
+      .on('set', this.setSat.bind(this));
+  }
+  if (this.type === 'light') {
+    this.service.addOptionalCharacteristic(Characteristic.StatusFault);
+    this.service.getCharacteristic(Characteristic.StatusFault)
+      .updateValue(this.hk.fault);
+    if (!this.bridge.platform.config.philipsLights) {
+      this.service.addOptionalCharacteristic(Characteristic.UniqueID);
+      this.service.getCharacteristic(Characteristic.UniqueID)
+        .updateValue(this.obj.uniqueid);
+    }
+  }
+  this.service.addOptionalCharacteristic(Characteristic.Resource);
+  this.service.getCharacteristic(Characteristic.Resource)
+    .updateValue(this.resource);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueLight.setHomebridge" id="apidoc.element.homebridge-hue.HueLight.setHomebridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.HueLight.</span>setHomebridge
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setHomebridge(homebridge) {
+  Accessory = homebridge.platformAccessory;
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const dynamic = false;
+
+const HuePlatformModule = require('./lib/HuePlatform');
+const HuePlatform = HuePlatformModule.HuePlatform;
+
+module.exports = function(homebridge) {
+  HuePlatformModule.<span class="apidocCodeKeywordSpan">setHomebridge</span>(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue.HuePlatform" id="apidoc.module.homebridge-hue.HuePlatform">module homebridge-hue.HuePlatform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HuePlatform.HuePlatform" id="apidoc.element.homebridge-hue.HuePlatform.HuePlatform">
+        function <span class="apidocSignatureSpan">homebridge-hue.</span>HuePlatform
+        <span class="apidocSignatureSpan">(log, config, api)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HuePlatform(log, config, api) {
+  this.log = log;
+  this.api = api;
+  this.config = {
+    ct: false,
+    excludeSensorTypes: {},
+    groups: false,
+    group0: false,
+    heartrate: 5,
+    hosts: [],
+    lights: false,
+    linkbutton: true,
+    lowBattery: 25,
+    philipsLights: false,
+    rules: false,
+    rooms: false,
+    schedules: false,
+    sensors: false,
+    timeout: 5,
+    users: {},
+    waitTimeResend: 300,
+    waitTimeUpdate: 20,
+    wallSwitch: false
+  };
+  for (const key in config) {
+    const value = config[key];
+    switch (key.toLowerCase()) {
+      case 'ct':
+        this.config.ct = value ? true : false;
+        break;
+      case 'excludesensortypes':
+        if (Array.isArray(value)) {
+          for (const type of value) {
+            this.config.excludeSensorTypes[type] = true;
+          }
+        } else {
+          this.log.error(
+            'config.json: %s: warning: ignoring non-array value', key
+          );
+        }
+        break;
+      case 'groups':
+        this.config.groups = value ? true : false;
+        break;
+      case 'group0':
+        this.config.group0 = value ? true : false;
+        break;
+      case 'heartrate':
+        this.config.heartrate = toIntBetween(
+          value, 1, 30, this.config.heartrate
+        );
+        break;
+      case 'host':
+      case 'hosts':
+        if (Array.isArray(value)) {
+          for (const host of value) {
+            if (host !== '') {
+              this.config.hosts.push(host);
+            }
+          }
+        } else if (value !== '') {
+          this.config.hosts.push(value);
+        }
+        break;
+      case 'lights':
+        this.config.lights = value ? true : false;
+        break;
+      case 'linkbutton':
+        this.config.linkbutton = value ? true : false;
+        break;
+      case 'lowbattery':
+        this.config.lowBattery = toIntBetween(
+          value, 0, 100, this.config.lowBattery
+        );
+        break;
+      case 'name':
+        this.name = value;
+        break;
+      case 'parallelrequests':
+        this.config.parallelRequests = toIntBetween(
+          value, 1, 30, this.config.parallelRequests
+        );
+        break;
+      case 'philipslights':
+        this.config.philipsLights = value ? true : false;
+        break;
+      case 'platform':
+        break;
+      case 'rooms':
+        this.config.rooms = value ? true : false;
+        break;
+      case 'rules':
+        this.config.rules = value ? true : false;
+        break;
+      case 'schedules':
+        this.config.schedules = value ? true : false;
+        break;
+      case 'sensors':
+        this.config.sensors = value ? true : false;
+        break;
+      case 'timeout':
+        this.config.timeout = toIntBetween(
+          value, 5, 30, this.config.timeout
+        );
+        break;
+      case 'users':
+        this.config.users = value;
+        break;
+      case 'waittimeresend':
+        this.config.waitTimeResend = toIntBetween(
+          value, 100, 1000, this.config.waitTimeResend
+        );
+        break;
+      case 'waittimeswitch':
+        this.log.error('config.json: warning: %s: deprecated', key);
+        break;
+      case 'waittimeupdate':
+        this.config.waitTimeUpdate = toIntBetween(
+          value, 0, 500, this.config.waitTimeUpdate
+        );
+        break;
+      case 'wallswitch':
+        this.config.wallSwitch = value ? true : false;
+        break;
+      default:
+        this.log.error('config.json: warning: %s: ignoring unknown key', key);
+    }
+  }
+  this.bridgeMap = {};
+  this.bridges = [];
+  this.log.info(
+    '%s v%s, node %s, homebridge v%s', packageConfig.name,
+    packageConfig.version, process.version, homebridgeVersion
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HuePlatform.setHomebridge" id="apidoc.element.homebridge-hue.HuePlatform.setHomebridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.HuePlatform.</span>setHomebridge
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setHomebridge(homebridge) {
+  Accessory = homebridge.platformAccessory;
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+  homebridgeVersion = homebridge.serverVersion;
+
+  Characteristic.ProgrammableSwitchEvent.SINGLE_PRESS = 0;
+  Characteristic.ProgrammableSwitchEvent.DOUBLE_PRESS = 1;
+  Characteristic.ProgrammableSwitchEvent.LONG_PRESS = 2;
+
+  Characteristic.Resource = function() {
+    Characteristic.call(this, 'Resource', Characteristic.Resource.UUID);
+    this.setProps({
+      format: Characteristic.Formats.STRING,
+      perms: [Characteristic.Perms.READ]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Resource, Characteristic);
+  Characteristic.Resource.UUID = '00000021-0000-1000-8000-656261617577';
+
+  Characteristic.Enabled = function() {
+    Characteristic.call(this, 'Enabled', Characteristic.Enabled.UUID);
+    this.setProps({
+      format: Characteristic.Formats.BOOL,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY,
+      	      Characteristic.Perms.WRITE]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Enabled, Characteristic);
+  Characteristic.Enabled.UUID = '00000022-0000-1000-8000-656261617577';
+
+  Characteristic.LastUpdated = function() {
+    Characteristic.call(this, 'Last Updated', Characteristic.LastUpdated.UUID);
+    this.setProps({
+      format: Characteristic.Formats.STRING,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.LastUpdated, Characteristic);
+  Characteristic.LastUpdated.UUID = '00000023-0000-1000-8000-656261617577';
+
+  Characteristic.Heartrate = function() {
+    Characteristic.call(this, 'Heartrate', Characteristic.Heartrate.UUID);
+    this.setProps({
+      format: Characteristic.Formats.INT,
+      unit: Characteristic.Units.SECONDS,
+      minValue: 1,
+      maxValue: 30,
+      stepValue: 1,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY,
+              Characteristic.Perms.WRITE]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Heartrate, Characteristic);
+  Characteristic.Heartrate.UUID = '00000024-0000-1000-8000-656261617577';
+
+  Characteristic.Dark = function() {
+    Characteristic.call(this, 'Dark', Characteristic.Dark.UUID);
+    this.setProps({
+      format: Characteristic.Formats.BOOL,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Dark, Characteristic);
+  Characteristic.Dark.UUID = '00000025-0000-1000-8000-656261617577';
+
+  Characteristic.Daylight = function() {
+    Characteristic.call(this, 'Daylight', Characteristic.Daylight.UUID);
+    this.setProps({
+      format: Characteristic.Formats.BOOL,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Daylight, Characteristic);
+  Characteristic.Daylight.UUID = '00000026-0000-1000-8000-656261617577';
+
+  Characteristic.Status = function() {
+    Characteristic.call(this, 'Status', Characteristic.Status.UUID);
+    this.setProps({
+      minValue: 0,
+      maxValue: 255,
+      minStep: 1,
+      format: Characteristic.Formats.INT,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY,
+              Characteristic.Perms.WRITE]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.Status, Characteristic);
+  Characteristic.Status.UUID = '00000027-0000-1000-8000-656261617577';
+
+  Characteristic.AnyOn = function() {
+    Characteristic.call(this, 'Any On', Characteristic.AnyOn.UUID);
+    this.setProps({
+      format: Characteristic.Formats.BOOL,
+      perms: [Characteristic.Perms.READ, Characteristic.Perms.NOTIFY,
+              Characteristic.Perms.WRITE]
+    });
+    this.value = this.getDefaultValue();
+  };
+  util.inherits(Characteristic.AnyOn, Characteristic);
+  Characteristic.AnyOn.UUID = '00000028- ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const dynamic = false;
+
+const HuePlatformModule = require('./lib/HuePlatform');
+const HuePlatform = HuePlatformModule.HuePlatform;
+
+module.exports = function(homebridge) {
+  HuePlatformModule.<span class="apidocCodeKeywordSpan">setHomebridge</span>(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue.HueSchedule" id="apidoc.module.homebridge-hue.HueSchedule">module homebridge-hue.HueSchedule</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueSchedule.HueSchedule" id="apidoc.element.homebridge-hue.HueSchedule.HueSchedule">
+        function <span class="apidocSignatureSpan">homebridge-hue.</span>HueSchedule
+        <span class="apidocSignatureSpan">(bridge, id, obj, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HueSchedule(bridge, id, obj, type) {
+  // jshint -W106
+  this.log = bridge.log;
+  this.bridge = bridge;
+  this.name = obj.name;
+  this.type = type ? type : 'schedule';
+  this.resource = '/' + this.type + 's/' + id;
+  this.uuid_base = bridge.uuid_base + '/' + this.resource;
+  this.obj = obj;
+  this.refresh();
+
+  this.infoService = new Service.AccessoryInformation();
+  this.infoService
+    .updateCharacteristic(Characteristic.Manufacturer, 'Philips')
+    .updateCharacteristic(Characteristic.Model, type === 'schedule' ?
+      'Schedule' : 'Rule'
+    )
+    .updateCharacteristic(Characteristic.SerialNumber, this.uuid_base);
+  this.service = new Service.Resource(this.name, this.resource);
+  this.service.getCharacteristic(Characteristic.Enabled)
+    .updateValue(this.hk.enabled)
+    .on('set', this.setEnabled.bind(this));
+  if (this.type === 'rule') {
+    this.service
+      .updateCharacteristic(Characteristic.LastTriggered, this.hk.lasttriggered)
+      .updateCharacteristic(
+        Characteristic.TimesTriggered, this.hk.timestriggered
+      );
+  }
+  this.service
+    .updateCharacteristic(Characteristic.StatusActive, this.hk.enabled)
+    .updateCharacteristic(Characteristic.Resource, this.resource);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueSchedule.setHomebridge" id="apidoc.element.homebridge-hue.HueSchedule.setHomebridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.HueSchedule.</span>setHomebridge
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setHomebridge(homebridge) {
+  Accessory = homebridge.platformAccessory;
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const dynamic = false;
+
+const HuePlatformModule = require('./lib/HuePlatform');
+const HuePlatform = HuePlatformModule.HuePlatform;
+
+module.exports = function(homebridge) {
+  HuePlatformModule.<span class="apidocCodeKeywordSpan">setHomebridge</span>(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-hue.HueSensor" id="apidoc.module.homebridge-hue.HueSensor">module homebridge-hue.HueSensor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueSensor.HueSensor" id="apidoc.element.homebridge-hue.HueSensor.HueSensor">
+        function <span class="apidocSignatureSpan">homebridge-hue.</span>HueSensor
+        <span class="apidocSignatureSpan">(bridge, id, obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HueSensor(bridge, id, obj) {
+  // jshint -W106
+  this.log = bridge.log;
+  this.bridge = bridge;
+  this.name = obj.name;
+  this.obj = obj;
+  this.resource = '/sensors/' + id;
+
+  if (this.obj.type[0] === 'Z') {
+    // Zigbee sensor.
+    this.manufacturer = this.obj.manufacturername;
+    this.model = this.obj.modelid;
+    this.uuid_base = this.obj.uniqueid.split('-')[0];
+  } else {
+    // Hue bridge internal sensor.
+    this.manufacturer = 'Philips';
+    this.model = this.obj.type;
+    this.uuid_base = this.bridge.uuid_base + this.resource;
+  }
+  this.infoService = new Service.AccessoryInformation();
+  this.serviceList = [this.infoService];
+
+  // See: http://www.developers.meethue.com/documentation/supported-sensors
+  let buttonIndex;
+  switch(this.obj.type) {
+    case 'ZGPSwitch':   // 1.1 - Hue Tap
+      buttonIndex = 1;
+      ['1', '2', '3', '4'].map(function(button) {
+        const service = new Service.StatelessProgrammableSwitch(
+          this.name + ' ' + button, button
+        );
+        this.serviceList.push(service);
+        service.getCharacteristic(Characteristic.ProgrammableSwitchEvent)
+          .setProps({
+            minValue: Characteristic.ProgrammableSwitchEvent.SINGLE_PRESS,
+            maxValue: Characteristic.ProgrammableSwitchEvent.SINGLE_PRESS
+          });
+        service.getCharacteristic(Characteristic.LabelIndex)
+          .setValue(buttonIndex);
+        buttonIndex += 1;
+      }.bind(this));
+      this.service = new Service.Resource(this.name);
+      this.type = {
+        key:            'buttonevent',
+        homekitValue:   function(v) {return {34: 1, 16: 2, 17: 3, 18: 4}[v];},
+        homekitAction:  function() {return 0;}
+      };
+      break;
+    case 'ZLLSwitch': 	// 1.2 - Hue Wireless Dimmer Switch
+      buttonIndex = 1;
+      ['On', 'Dim Up', 'Dim Down', 'Off'].map(function(button) {
+        const service = new Service.StatelessProgrammableSwitch(
+          this.name + ' ' + button, button
+        );
+        this.serviceList.push(service);
+        service.getCharacteristic(Characteristic.ProgrammableSwitchEvent)
+          .setProps({
+            minValue: Characteristic.ProgrammableSwitchEvent.SINGLE_PRESS,
+            maxValue: Characteristic.ProgrammableSwitchEvent.LONG_PRESS,
+            validValues: [
+              Characteristic.ProgrammableSwitchEvent.SINGLE_PRESS,
+              Characteristic.ProgrammableSwitchEvent.LONG_PRESS
+            ]
+          });
+          service.getCharacteristic(Characteristic.LabelIndex)
+            .setValue(buttonIndex);
+          buttonIndex += 1;
+      }.bind(this));
+      this.service = new Service.Resource(this.name);
+      this.type = {
+        key:            'buttonevent',
+        homekitValue:   function(v) {return Math.floor(v / 1000);},
+        homekitAction:  hkZLLSwitchAction
+      };
+      break;
+    case 'ZLLPresence':	// 1.3 - Hue Motion Sensor
+      this.service = new Service.MotionSensor(this.name);
+      this.type = {
+        Characteristic: Characteristic.MotionDetected,
+        key:		        'presence',
+        name:		        'motion',
+        unit:		        '',
+        homekitValue:   function(v) {return v ? 1 : 0;}
+      };
+      break;
+    case 'ZLLTemperature': // 1.4 - Hue Motion Sensor
+<span class="apidocCodeCommentSpan">      /* falls through */
+</span>    case 'CLIPTemperature': // 2.4
+      this.service = new Service.TemperatureSensor(this.name);
+      this.type = {
+        Characteristic:	Characteristic.CurrentTemperature,
+        props:          { minValue: -273.2, maxValue: 1000.0 },
+        key:		        'temperature',
+        name:		        'temperature',
+        unit:		        'ËšC',
+        homekitValue:   function(v) {return v ? Math.round(v / 10) / 10 : 0;}
+      };
+      break;
+    case 'ZLLLightLevel': // 2.7 - Hue Motion Sensor
+      /* falls through */
+    case 'CLIPLightLevel': // 2.7
+      this.service = new Service.LightSensor(this.name);
+      this.type = {
+        Characteristic:	Characteristic.CurrentAmbientLightLevel,
+        key:		        'lightlevel',
+        name:		        'light level',
+        unit:		        ' lux',
+        homeki ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-hue.HueSensor.setHomebridge" id="apidoc.element.homebridge-hue.HueSensor.setHomebridge">
+        function <span class="apidocSignatureSpan">homebridge-hue.HueSensor.</span>setHomebridge
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setHomebridge(homebridge) {
+  Accessory = homebridge.platformAccessory;
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+const dynamic = false;
+
+const HuePlatformModule = require('./lib/HuePlatform');
+const HuePlatform = HuePlatformModule.HuePlatform;
+
+module.exports = function(homebridge) {
+  HuePlatformModule.<span class="apidocCodeKeywordSpan">setHomebridge</span>(homebridge);
+  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
